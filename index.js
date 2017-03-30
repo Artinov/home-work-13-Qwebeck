@@ -15,14 +15,16 @@ var server = http.createServer(function(request, response) {
    var y = Number(b);
    console.log(a)
    console.log(b)
-   console.log(x+y)
+   console.log(x+y);
+   response.end(a+b)
+
     switch (request.url) {
         case '/':
             response.end("Hello");
             break;
-            case '/a+b':
-            response.end(x+y);
-            break;
+            // case '/':
+            // response.end(x+y);
+            // break;
             default:        
    response.end("Error");
              break;
