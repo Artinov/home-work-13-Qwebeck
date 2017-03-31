@@ -16,7 +16,9 @@ var server = http.createServer(function(request, response) {
    console.log(a)
    console.log(b)
    console.log(x+y);
-   response.end(a+b)
+   var z = x+y
+var result = z.toString()
+      response.end(result)
 
     switch (request.url) {
         case '/':
