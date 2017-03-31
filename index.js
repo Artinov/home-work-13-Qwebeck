@@ -8,15 +8,19 @@ return
 
 var server = http.createServer(function(request, response) {
     console.log(request.url)
-   var number =  request.url.split("/")[1].split("+");
+   var number =  request.url.split("/")[1].split("");
    var a = number[0];
-   var b = number[1];
+   var b = number[2];
    var x = Number(a);
    var y = Number(b);
    console.log(a)
    console.log(b)
    console.log(x+y);
-   var z = x+y
+   if(number[1] =="+"){
+   var z = x+y 
+   } else{
+    z = x-y
+   }
 var result = z.toString()
       response.end(result)
 
